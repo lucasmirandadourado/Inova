@@ -1,0 +1,31 @@
+
+ul li a {     
+    font-weight: bold;
+}
+.brand-logo {
+    margin-top: 3px;
+    margin-left: 11px;
+}
+
+.logo-footer {
+    width: 250px;
+}
+
+.texto-footer {
+    margin-top: 17px;
+    margin-left: -18px;
+    height: 95px;
+    font-family: gotham xnarrow book;
+    font-size: 28px;
+    font-weight: 400;
+    text-align: -webkit-left;
+    
+}
+.menu-rodape {
+    margin-top: -16px;
+    font-size: 100%;
+    font: initial;
+    padding: -8px;
+    border: 0;
+    vertical-align: top;
+}
