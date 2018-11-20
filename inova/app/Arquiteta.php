@@ -3,14 +3,21 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
+use App\Projeto;
 
 class Arquiteta extends Model
 {
-    public function getArquiteta() {
-        return 'Arquiteta sendo retornada';
+    protected $guarded = ['id', 'created_at', 'update_at'];
+    public function getListaArquitetas($limit) {
+        return DB::table('arquitetas')->paginate($limit); 
     }
 
-    public function getListaArquitetas() {
-        return 'Lista com todas as arquitetas';
+    public function getProjetos(){
+        return $this->belongsToMany(Projeto::class);
+    }
+    
+    public function getListaAll() {
+        return DB::table('arquitetas')->get();
     }
 }

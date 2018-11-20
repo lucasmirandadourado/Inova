@@ -5,6 +5,7 @@
     <title>Inova - @yield('titulo')</title>
     <link rel="stylesheet" href="/materialize/css/materialize.css">
     <link rel="stylesheet" href="/css/inova.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
