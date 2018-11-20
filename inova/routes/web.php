@@ -11,14 +11,20 @@
 |
 */
 
-Route::get('/', 'ClienteController@index');
+Route::get('/', 'Controller@index');
 
 Route::get('contato', function(){
 	return 'Contato do cliente.';
 });
 
 Route::get('/arquiteta', 'ArquitetaController@index');
+Route::get('/arquiteta/criar', 'ArquitetaController@create');
+Route::post('/arquiteta/criar', 'ArquitetaController@store');
 
 Route::get('/cliente', 'ClienteController@index');
 Route::get('/cliente/criar', 'ClienteController@create');
-Route::resource('/cliente', 'ClienteController@store');
+Route::post('/cliente/criar', 'ClienteController@store');
+
+Route::get('/projeto', 'ProjetoController@index');
+Route::get('/projeto/criar', 'ProjetoController@create');
+Route::post('/projeto/criar', 'ProjetoController@store');

@@ -6,11 +6,11 @@
 @section('conteudo')
   
 <div class="row">
-<h3>Cadastro cliente</h3>
+<h3>Cadastro Arquiteta</h3>
 
 </div>
 
-    <form class="col s12" method="POST" action="/cliente/criar">
+    <form class="col s12" method="POST" action="/arquiteta/criar">
         @csrf
       <div class="row">
         <div class="input-field col s6">
@@ -30,7 +30,12 @@
           <label for="endereco">Endereço</label>
         </div>
       </div>
-      
+      <div class="row">
+            <div class="input-field col s12">
+              <input id="cau" type="text" class="validate" name="cau">
+              <label for="cau">CAU</label>
+            </div>
+          </div>
       <div class="row">
         <div class="col s12">
             <a class="waves-effect waves-light btn" href="/">Cancelar</a>

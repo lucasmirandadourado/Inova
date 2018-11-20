@@ -29,3 +29,19 @@ ul li a {
     border: 0;
     vertical-align: top;
 }
+.pagination li {
+    vertical-align: initial;
+}
+.pagination li a {
+    font-size: 14px;
+}
+.waves-effect .active {
+    width: 29px;
+}
+.inv-btn-add {
+    margin: 24px 0px;
+}
+.inv-btn { 
+    padding-top: 10px;
+    height: 96px;
+}

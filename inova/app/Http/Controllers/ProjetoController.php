@@ -3,41 +3,41 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use App\Projeto;
 use App\Cliente;
+use App\Arquiteta;
 
-class ClienteController extends Controller
+class ProjetoController extends Controller
 {
     public function index()
     {
-        $cliente = new Cliente;
-        $listaClientes = $cliente->getListaCliente(10);
-        
-        return view("cliente.index", compact('listaClientes'));
+        $projeto = new Projeto;
+        $listaProjeto = $projeto->getListaProjetos(10);
+        return view("projeto.index", compact('listaProjeto'));
     }
 
     public function create()
     {
-        return view("cliente.criar");
+        $cliente = new Cliente;
+        $clientes = $cliente->getListaClientes();
+
+        $arquiteta = new Arquiteta;
+        $arquitetas = $arquiteta->getListaAll();
+
+        return view("projeto.criar", compact('clientes', 'arquitetas'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        $cliente = new Cliente([
+        $projeto = new Projeto([
             'nome' => $request->get('nome'),
             'email' => $request->get('email'),
             'endereco' => $request->get('endereco'),
             
         ]);
-        $cliente->save();
+        $projeto->save();
         
-        return redirect('cliente');
+        return redirect('projeto');
     }
 
     /**
