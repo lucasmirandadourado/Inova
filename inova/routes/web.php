@@ -28,3 +28,4 @@ Route::post('/projeto/criar', 'ProjetoController@store');
 Route::post('/ajaxProject', 'ProjetoController@ajaxProject');
 
 Route::get('/home', 'HomeController@index')->name('home');
+

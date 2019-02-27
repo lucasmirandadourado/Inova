@@ -1,29 +1,29 @@
 $.ajaxSetup({
-    headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
+    headers: { 'X-CSRF-Token': $('meta[name=_token]').attr('content') }
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
     $('#inv_tabela').DataTable();
     tabelaProjetos();
-} );
+});
 
-function tabelaProjetos() { 
-    
+function tabelaProjetos() {
+
     $.ajax({
         method: "POST",
-        url: "/ajaxProject", 
+        url: "/ajaxProject",
         date: 'buscarProjeto',
         dataType: "json",
         success: function (result) {
             console.log(result)
-        }, 
-        beforeSend: function(){
+        },
+        beforeSend: function () {
 
-        }, 
-        error: function(result){
-            console.log("Erro"+result)
+        },
+        error: function (result) {
+            console.log("Erro" + result)
         }
     });
 
     $('#dashboard_projetos').html();
- }
+}
