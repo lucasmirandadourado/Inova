@@ -1,119 +1,121 @@
 @extends('layout.padrao')
  
     
-@section('titulo', 'Arquiteta')
+@section('titulo', 'Dashboard')
 
 @section('conteudo')
 
-
-        <div class="col s12 m6">
-          <div class="card #006064 cyan darken-4">
-            <div class="card-content">
-                <span class="card-title">Arquiteta</span>
-    <table class="striped responsive-table">
-            <thead>
-              <tr>
-                  <th>CAU</th>
-                  <th>Arquiteta</th>                  
-                  <th>E-mail</th>
-                  <th>Endereço</th>                  
-              </tr>
-            </thead>
-    
-            <tbody>
-              @foreach ($listaArquiteta as $item)
-                <tr>
-                <td>{{$item->cau}}</td>
-                <td>{{$item->nome}}</td>
-                <td>{{$item->email}}</td>
-                <td>{{$item->endereco}}</td>
-                </tr>    
-                
-              @endforeach
-            
-            </tbody>
-          </table></div>
-          <div class="card-action">
-          <a class="btn-floating pulse" href="arquiteta/criar"><i class="material-icons">add</i></a>
-          </div>
-        </div>
-      </div>
-    
-
-
- 
-        <div class="col s12 m6">
-          <div class="card #006064 cyan darken-4">
-            <div class="card-content">
-                <span class="card-title">Clientes</span>
-    <table class="striped responsive-table">
-                <thead>
-                  <tr>
-                      <th>Cliente</th>
-                      <th>Titulo</th>
-                      <th>Cidade</th>
-                      <th>Endereço</th>
-                  </tr>
-                </thead>
-        
-                <tbody>
-                  @foreach ($listaClientes as $item)
-                    <tr>
-                      <td>{{$item->id}}</td>
-                      <td>{{$item->nome}}</td>
-                      <td>{{$item->email}}</td>
-                      <td>{{$item->endereco}}</td>
-                    </tr>                    
-                  @endforeach
+<div class="content-wrapper">
+<section class="content">
   
-                </tbody>
-              </table></div>
-              <div class="card-action">
-                  <a class="btn-floating pulse" href="cliente/criar"><i class="material-icons">add</i></a>
-                
-              </div>
-            </div>
-          </div>
+<div class="row">
+  <div class="col-lg-3 col-xs-6">
+    <!-- small box -->
+    <div class="small-box bg-aqua">
+      <div class="inner">
+        <h3>150</h3>
 
-          <div class="col s12 m6">
-          <div class="card darken-1">
-            <div class="card-content">
-                <span class="card-title">Clientes com pendencias</span>
-                <table class="striped responsive-table">
-                        <thead>
-                          <tr>
-                              <th>Cliente</th>
-                              <th>Titulo</th>
-                              <th>Cidade</th>
-                              <th>Data de entrega</th>
-                          </tr>
-                        </thead>
-                
-                        <tbody>
-                          <tr>
-                            <td>Maria de Lourdes</td>
-                            <td>Quarto</td>
-                            <td>Jussara</td>
-                            <td>25/12/2018</td>
-                          </tr>
-                          <tr>
-                            <td>Antonio</td>
-                            <td>Loja Frutas</td>
-                            <td>America</td>
-                            <td>20/01/2019</td>
-                          </tr>
-                          <tr>
-                            <td>João Silva</td>
-                            <td>Galpão de cebola</td>
-                            <td>Lapão</td>
-                            <td>04/03/2018</td>
-                          </tr>
-                        </tbody>
-                      </table></div>
-                      <div class="card-action">
-                        
-                      </div>
-                    </div>
-                  </div>
+        <p>Clientes</p>
+      </div>
+      <div class="icon">
+        <i class="ion ion-person-add"></i>
+      </div>
+      
+    </div>
+  </div>
+  <!-- ./col -->
+  <div class="col-lg-3 col-xs-6">
+    <!-- small box -->
+    <div class="small-box bg-green">
+      <div class="inner">
+        <h3>53<sup style="font-size: 20px">%</sup></h3>
+
+        <p>Projetos abertos</p>
+      </div>
+      <div class="icon">
+        <i class="ion ion-stats-bars"></i>
+      </div>
+      
+    </div>
+  </div>
+  <!-- ./col -->
+  <div class="col-lg-3 col-xs-6">
+    <!-- small box -->
+    <div class="small-box bg-yellow">
+      <div class="inner">
+        <h3>44</h3>
+
+        <p>Projetos totais</p>
+      </div>
+      <div class="icon">
+        <i class="ion ion-person-add"></i>
+      </div>
+      
+    </div>
+  </div>
+  <!-- ./col -->
+  <div class="col-lg-3 col-xs-6">
+    <!-- small box -->
+    <div class="small-box bg-red">
+      <div class="inner">
+        <h3>70</h3>
+
+        <p>Orçamento</p>
+      </div>
+      <div class="icon">
+        <i class="fa fa-bank"></i>
+      </div>
+      
+    </div>
+  </div>
+  <!-- ./col -->
+</div>
+  
+<div class="row">
+    
+  <section class="content">    
+    <div class="box">
+      <div class="box-header with-border">
+        <h3 class="box-title">Lista de projetos</h3>
+        <div class="box-tools pull-right"></div>
+      </div>
+      <div class="box-body">   
+        <table id="inv_tabela" class="table table-striped table-bordered" style="width:100%">
+          <thead>
+              <tr>
+                  <th>#</th>
+                  <th>Cliente</th>
+                  <th>Data do projeto</th>
+                  <th>Data da Obra</th>
+                  <th>Estimativa de entrega</th>
+                  <th>Cidade</th>
+                  <th>Contato</th>
+              </tr>
+          </thead>
+          <tbody>
+              <div id="dashboard_projetos"></div>
+          </tbody>
+          <tfoot>
+              <tr>
+                  <th>#</th>
+                  <th>Cliente</th>
+                  <th>Data do projeto</th>
+                  <th>Data da Obra</th>
+                  <th>Estimativa de entrega</th>
+                  <th>Cidade</th>
+                  <th>Contato</th>
+              </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </section>
+  
+</div>
+
+</section>
+
+</div>
+
                  
 @endsection

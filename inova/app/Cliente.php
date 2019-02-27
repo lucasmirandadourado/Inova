@@ -8,7 +8,7 @@ use App\Projeto;
 
 class Cliente extends Model
 {
-    protected $fillable = ['id', 'nome','email','endereco'];
+    protected $fillable = ['id', 'nome'];
     protected $guarded = ['id', 'created_at', 'update_at'];
     public function getListaCliente($limit) {
         return DB::table('clientes')->paginate($limit); 

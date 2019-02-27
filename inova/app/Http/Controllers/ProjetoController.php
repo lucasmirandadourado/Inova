@@ -9,15 +9,13 @@ use App\Arquiteta;
 
 class ProjetoController extends Controller
 {
-    public function index()
-    {
+    public function index() {
         $projeto = new Projeto;
         $listaProjeto = $projeto->getListaProjetos(10);
         return view("projeto.index", compact('listaProjeto'));
     }
 
-    public function create()
-    {
+    public function create() {
         $cliente = new Cliente;
         $clientes = $cliente->getListaClientes();
 
@@ -27,8 +25,7 @@ class ProjetoController extends Controller
         return view("projeto.criar", compact('clientes', 'arquitetas'));
     }
 
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         $projeto = new Projeto([
             'nome' => $request->get('nome'),
             'email' => $request->get('email'),
@@ -46,8 +43,7 @@ class ProjetoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
+    public function show($id) {
         //
     }
 
@@ -57,8 +53,7 @@ class ProjetoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
+    public function edit($id) {
         //
     }
 
@@ -69,8 +64,7 @@ class ProjetoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
+    public function update(Request $request, $id) {
         //
     }
 
@@ -80,8 +74,18 @@ class ProjetoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
+    public function destroy($id) {
         //
+    }
+
+    public function ajaxProject(Request $request) {
+        echo "AQUI";
+        $valor = $request->get('buscarProjeto');
+        if($valor != null) {
+            echo "2";
+        }
+        $arrayProjetos = Projeto::get();
+        var_dump($arrayProjetos);
+        echo json_encode($arrayProjetos);
     }
 }

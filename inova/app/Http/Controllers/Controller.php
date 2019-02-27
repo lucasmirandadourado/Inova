@@ -21,4 +21,6 @@ class Controller extends BaseController
         $listaArquiteta = $arquiteta->getListaArquitetas(4);
         return view('dashboard', compact('listaArquiteta', 'listaClientes'));
     }
+
+    
 }

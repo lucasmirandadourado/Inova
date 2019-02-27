@@ -14,7 +14,7 @@
         @csrf
       <div class="row">
         <div class="input-field col s6">
-          <input placeholder="Nome" id="nome" type="text" class="validate" name="nome">
+          <input id="nome" type="text" class="validate" name="nome">
           <label for="nome">Nome</label>
         </div>
       </div>

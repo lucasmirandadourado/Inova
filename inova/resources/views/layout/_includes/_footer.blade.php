@@ -1,30 +1,47 @@
-<footer class="page-footer">
-    <div class="container">
-      <div class="row">
-        
-            <div class="col l6 s12">
-                <div class="col s4"><img src="/img/icon-footer.png" alt=""></div>
-                <div class="col s6  texto-footer">A inovação está em nosso DNA</div>
-                <span class="col s6 menu-rodape"> 
-                    <a href="https://inovairece.com.br/inova-arquitetura-irece/">A Inova</a> - <a href="https://inovairece.com.br/category/artigos/">Artigos</a> - <a href="https://inovairece.com.br/contato/">Contato</a> 
-                </span>
-            </div>  
-          
-       
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links úteis</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 1.0.0
     </div>
-    <div class="footer-copyright">
-      <div class="container">
-      © 2018 Copyright      
-      </div>
-    </div>
+    <strong>Copyright &copy; 2014-2019 <a href="#">Dev. Lucas Dourado</a>.</strong> All rights
+    reserved.
   </footer>
+
+  <!-- jQuery 3 -->
+  <script src="AdminLTE-2.4.5/bower_components/jquery/dist/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="AdminLTE-2.4.5/bower_components/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+
+  <!-- Bootstrap 3.3.7 -->
+  <script src="AdminLTE-2.4.5/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- Morris.js charts -->
+  <script src="AdminLTE-2.4.5/bower_components/raphael/raphael.min.js"></script>
+  <script src="AdminLTE-2.4.5/bower_components/morris.js/morris.min.js"></script>
+  <!-- Sparkline -->
+  <script src="AdminLTE-2.4.5/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+  <!-- jvectormap -->
+  <script src="AdminLTE-2.4.5/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+  <script src="AdminLTE-2.4.5/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+  <!-- jQuery Knob Chart -->
+  <script src="AdminLTE-2.4.5/bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
+  <!-- daterangepicker -->
+  <script src="AdminLTE-2.4.5/bower_components/moment/min/moment.min.js"></script>
+  <script src="AdminLTE-2.4.5/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <!-- datepicker -->
+  <script src="AdminLTE-2.4.5/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+  <!-- Bootstrap WYSIHTML5 -->
+  <script src="AdminLTE-2.4.5/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+  <!-- Slimscroll -->
+  <script src="AdminLTE-2.4.5/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+  <!-- FastClick -->
+  <script src="AdminLTE-2.4.5/bower_components/fastclick/lib/fastclick.js"></script>
+  <!-- AdminLTE App -->
+  <script src="AdminLTE-2.4.5/dist/js/adminlte.min.js"></script>
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <script src="AdminLTE-2.4.5/dist/js/pages/dashboard.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="AdminLTE-2.4.5/dist/js/demo.js"></script>
+</body>
+</html>
+  

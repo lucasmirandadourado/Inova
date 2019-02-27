@@ -29,11 +29,11 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
+        
         $cliente = new Cliente([
-            'nome' => $request->get('nome'),
-            'email' => $request->get('email'),
-            'endereco' => $request->get('endereco'),
-            
+            'nome'      => $request->get('nome'),
+            'email'     => $request->get('email'),
+            'endereco'  => $request->get('endereco')
         ]);
         $cliente->save();
         
