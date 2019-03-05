@@ -22,7 +22,10 @@ class Projeto extends Migration
             $table->double('area_total', 6, 2);
             $table->double('area_construcao', 6, 2);
             $table->string('tipo', 20);
-            
+            $table->string('cidade', 60);
+
+            $table->timestamp('data_inicio_obra');
+            $table->timestamp('data_entega');
 
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at');

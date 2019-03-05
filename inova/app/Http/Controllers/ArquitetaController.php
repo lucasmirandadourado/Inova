@@ -9,13 +9,8 @@ use App\Cliente;
 
 class ArquitetaController extends Controller
 {
-    public function index() {
-        $cliente = new Cliente;
-        $listaClientes = $cliente->getListaCliente(4);
-
-        $arquiteta = new Arquiteta;
-        $listaArquiteta = $arquiteta->getListaArquitetas(4);
-        return view('arquiteta.index', compact('listaArquiteta', 'listaClientes'));
+    public function index() {     
+        return view('arquiteta.index');
     }
 
     public function create()
@@ -34,5 +29,10 @@ class ArquitetaController extends Controller
         $arquiteta->save();
         
         return redirect('arquiteta');
+    }
+
+    public function ajaxArquiteta() {        
+        $arquitetas = Arquiteta::all();    
+        return response()->json($arquitetas);
     }
 }

@@ -5,15 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Cliente;
+use Symfony\Component\HttpKernel\Client;
 
 class ClienteController extends Controller
 {
     public function index()
     {
-        $cliente = new Cliente;
-        $listaClientes = $cliente->getListaCliente(10);
-        
-        return view("cliente.index", compact('listaClientes'));
+        return view("cliente.index");
     }
 
     public function create()
@@ -84,4 +82,10 @@ class ClienteController extends Controller
     {
         //
     }
+
+    public function ajaxCliente(Request $request) {
+        $clientes = Cliente::all();
+        return response()->json($clientes);
+    }
 }
+

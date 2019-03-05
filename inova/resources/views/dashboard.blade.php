@@ -80,6 +80,7 @@
         <div class="box-tools pull-right"></div>
       </div>
       <div class="box-body">   
+          {{ csrf_field() }}
         <table id="inv_tabela" class="table table-striped table-bordered" style="width:100%">
           <thead>
               <tr>
@@ -88,13 +89,10 @@
                   <th>Data do projeto</th>
                   <th>Data da Obra</th>
                   <th>Estimativa de entrega</th>
-                  <th>Cidade</th>
-                  <th>Contato</th>
+                  <th>Cidade</th>                  
               </tr>
           </thead>
-          <tbody>
-              <div id="dashboard_projetos"></div>
-          </tbody>
+         
           <tfoot>
               <tr>
                   <th>#</th>
@@ -102,8 +100,7 @@
                   <th>Data do projeto</th>
                   <th>Data da Obra</th>
                   <th>Estimativa de entrega</th>
-                  <th>Cidade</th>
-                  <th>Contato</th>
+                  <th>Cidade</th>                  
               </tr>
           </tfoot>
         </table>
@@ -119,3 +116,6 @@
 
                  
 @endsection
+@push('scripts')
+    <script src="js/inova.js"></script>
+@endpush 

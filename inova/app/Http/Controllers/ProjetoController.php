@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Projeto;
 use App\Cliente;
 use App\Arquiteta;
@@ -13,7 +14,7 @@ class ProjetoController extends Controller
     {
         $projeto = new Projeto;
         $listaProjeto = $projeto->getListaProjetos(10);
-        return view("projeto.index", compact('listaProjeto'));
+        return view("projeto.index");
     }
 
     public function create()
@@ -85,15 +86,13 @@ class ProjetoController extends Controller
         //
     }
 
-    public function ajaxProject(Request $request)
+    
+    public function ajaxProjeto(Request $request)
     {
-        echo "AQUI";
-        $valor = $request->get('buscarProjeto');
-        if ($valor != null) {
-            echo "2";
-        }
-        $arrayProjetos = Projeto::get();
-        var_dump($arrayProjetos);
-        echo json_encode($arrayProjetos);
+        $projetos = DB::table('projetos')
+        ->join('arquitetas', 'arquitetas.id', '=', 'projetos.arquiteta_id')
+        ->join('clientes', 'clientes.id', '=', 'projetos.cliente_id')->get();
+
+        return response()->json($projetos);
     }
 }

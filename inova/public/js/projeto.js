@@ -1,21 +1,23 @@
+
 function carregarLinha(result){
-    var tabela = $('#inv_tabela').DataTable()
+    var tabela = $('#inv_tbl_projetos').DataTable()
     
     if(Array.isArray(result)) {        
         $(result).each(function (index, item) { 
+            
         tabela.row.add([item.id, item.nome, item.descricao, formatarDate(item.created_at), 
-            formatarDate(item.data_inicio_obra), item.cidade]).draw().node();
-        });        
+            formatarDate(item.data_inicio_obra), item.cidade, formatarTeleforne(item.contato)]).draw().node();
+        });
     }
 }
-function tabelaProjetos() {
+function tabelaProjeto() {
     $.ajax({
-        method: 'GET',
+        method: 'get',
         url: "/projeto/ajaxProjeto",
         dataType: 'json',
         success: carregarLinha,
         beforeSend: function () {
-
+           
         },
         error: function (result) {
             console.log("Erro" + result)
@@ -26,6 +28,6 @@ function tabelaProjetos() {
 }
 
 $(document).ready(function () {
-    $('#inv_tabela').DataTable();
-    tabelaProjetos();
+    $('#inv_tbl_projetos').DataTable();
+    tabelaProjeto();
 });

@@ -32,3 +32,18 @@
 #inv_tabela_filter, #inv_tabela_paginate {
     float: right;
 }
+.content {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+}
+.btn-inv-criar {
+    padding: 5px;
+    margin: 0;
+}
+.pagination {
+   float: right !important;
+}
+#inv_tbl_cli_filter, #inv_tbl_arq_filter, #inv_tbl_projetos_filter label{
+    float: right;
+    margin-right: 1px;
+} 

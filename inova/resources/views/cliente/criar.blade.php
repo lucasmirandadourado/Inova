@@ -1,45 +1,44 @@
 @extends('layout.padrao')
- 
-    
-@section('titulo', 'Cliente')
-
+@section('titulo', 'Novo Cliente')
 @section('conteudo')
-  
+
+<div class="content-wrapper">
+<section class="content">
+    
 <div class="row">
-<h3>Cadastro cliente</h3>
-
+    <section class="content">    
+            
+        <form id="inv_form_cad_cliente" method="post">
+            @csrf
+            
+            <div class="form-group">
+                <label for="inv_nome">Nome</label>
+                <input type="text" class="form-control" id="inv_nome" placeholder="Nome do cliente">
+            </div>
+            <div class="form-group">
+                <label for="inv_email">E-mail</label>
+                <input type="email" class="form-control" id="inv_email" placeholder="E-mail">
+            </div>
+            <div class="form-group">
+                <label for="inv_contato">Contato</label>
+                <input type="tel"  class="form-control" id="inv_contato" placeholder="Contato">
+            </div>
+            <div class="form-group">
+                <label for="inv_endereco">Endereço</label>
+                <input type="text" class="form-control" id="inv_endereco" placeholder="Endereço">
+            </div>
+            <button class="btn btn-primary" id="inv_salvar_cliente">Salvar</button>
+        </form>
+                                    
+    </section>    
 </div>
+                
+</section>
 
-    <form class="col s12" method="POST" action="/cliente/criar">
-        @csrf
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="nome" type="text" class="validate" name="nome">
-          <label for="nome">Nome</label>
-        </div>
-      </div>
-      <div class="row">
-          <div class="input-field col s12">
-            <input id="email" type="email" class="validate" name="email">
-            <label for="email">Email</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="endereco" type="text" class="validate" name="endereco">
-          <label for="endereco">Endereço</label>
-        </div>
-      </div>
-      
-      <div class="row">
-        <div class="col s12">
-            <a class="waves-effect waves-light btn" href="/">Cancelar</a>
-            <button type="submit" class="btn btn-primary">Salvar</button>
-        </div>
-      </div>
-    </form>
-  
-        
-
+</div>              
 
 @endsection
+
+@push('scripts')
+    <script src="{{ url('js/cliente_criar.js') }}"></script>
+@endpush 

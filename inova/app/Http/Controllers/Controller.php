@@ -13,14 +13,8 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function index() {
-        $cliente = new Cliente;
-        $listaClientes = $cliente->getListaCliente(4);
-
-        $arquiteta = new Arquiteta;
-        $listaArquiteta = $arquiteta->getListaArquitetas(4);
-        return view('dashboard', compact('listaArquiteta', 'listaClientes'));
+    public function index() { 
+        return view('dashboard');
     }
-
     
 }

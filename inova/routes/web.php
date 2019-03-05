@@ -1,5 +1,7 @@
 <?php
 
+// use Illuminate\Routing\Route;
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,19 +15,20 @@
 
 Route::get('/', 'Controller@index');
 
+
 Route::get('/arquiteta', 'ArquitetaController@index');
+Route::get('/arquiteta/ajaxArquiteta', 'ArquitetaController@ajaxArquiteta');
 Route::get('/arquiteta/criar', 'ArquitetaController@create');
 Route::post('/arquiteta/criar', 'ArquitetaController@store');
 
 Route::get('/cliente', 'ClienteController@index');
+Route::get('/cliente/ajaxCliente', 'ClienteController@ajaxCliente');
 Route::get('/cliente/criar', 'ClienteController@create');
-Route::post('/cliente/criar', 'ClienteController@store');
+
 
 Route::get('/projeto', 'ProjetoController@index');
+Route::get('/projeto/ajaxProjeto', 'ProjetoController@ajaxProjeto');
 Route::get('/projeto/criar', 'ProjetoController@create');
 
-Route::post('/projeto/criar', 'ProjetoController@store');
-Route::post('/ajaxProject', 'ProjetoController@ajaxProject');
-
-Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/projeto/criar', 'ProjetoController@store');
+Route::get('projeto/ajaxProject', 'ProjetoController@ajaxProject');
