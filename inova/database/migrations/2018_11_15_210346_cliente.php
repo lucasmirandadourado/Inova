@@ -18,6 +18,7 @@ class Cliente extends Migration
             $table->string('nome', 200);
             $table->string('email', 200)->nullable($value = true);
             $table->string('endereco', 200)->nullable($value = true);
+            $table->string('contato', 20)->nullable($value = true);
             $table->timestamp('created_at');
             $table->timestamp('updated_at');
         });

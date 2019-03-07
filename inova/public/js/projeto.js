@@ -23,8 +23,6 @@ function tabelaProjeto() {
             console.log("Erro" + result)
         }
     });
-
-    
 }
 
 $(document).ready(function () {

@@ -47,3 +47,16 @@
     float: right;
     margin-right: 1px;
 } 
+#inv_descricao {
+    width: 100%;
+}
+#inv_select{
+    margin: 0px;
+    padding-left: 0px;
+}
+#inv_salvar_proj {
+    float: right;
+}
+#inv_salvar {
+    margin-top: 15px;
+}

@@ -1,25 +1,20 @@
 
-// $( "#inv_salvar_cliente" ).click(function() {
-//     $('#inv_form_cad_cliente')
-//     var form = $("form").val();
-//     console.log(form);
-// });
-
-
 $("#inv_form_cad_cliente").submit(function(e) {
-
     e.preventDefault(); 
-
     var form = $(this);
-    var url = form.attr('action');
-
     $.ajax({
            type: "POST",
-           url: url,
+           url: '/cliente/store',
            data: form.serialize(), // serializes the form's elements.
            success: function(data)
            {
-               alert(data); // show response from the php script.
+                $('#inv-msg-alert').removeClass( "hide" );    
+                $('#inv-msg').html('<span class="glyphicon glyphicon-user"></span> Cadastro realizado com sucesso.');
+                $('#inv-msg-alert').fadeOut(5000).delay(5000);
+                $('form')[0].reset();
+           },
+           error: function(data) {
+                console.log(data);
            }
          });
 });
@@ -27,7 +22,7 @@ $("#inv_form_cad_cliente").submit(function(e) {
 $(document).ready(function(){
     $.ajaxSetup({
         headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
 });

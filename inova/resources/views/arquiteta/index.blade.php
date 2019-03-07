@@ -15,7 +15,7 @@
                         <div class="box-header with-border">
                             <h3 class="box-title">Lista de Arquitetas</h3>
                             <div class="box-tools pull-right">
-                                    <a class="btn btn-primary btn-inv-criar">Criar Arquiteta</a>
+                            <a href="{{ url('/arquiteta/criar')}}" class="btn btn-primary btn-inv-criar">Criar Arquiteta</a>
                             </div>
                         </div>
                         

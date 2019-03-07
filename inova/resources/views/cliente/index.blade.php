@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="row">
                     <section class="content">    
-                    
+                        
                         <div class="box">
                         
                             <div class="box-header with-border">
@@ -34,16 +34,7 @@
                                     <tbody>
                                       
                                     </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Nome</th>
-                                            <th>E-mail</th>
-                                            <th>Contato</th>
-                                            <th>Endereço</th>
-                                            
-                                        </tr>
-                                    </tfoot>
+                                    
                                 </table>
                             </div>
                         </div>                        

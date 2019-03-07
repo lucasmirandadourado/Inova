@@ -15,7 +15,7 @@
                         <div class="box-header with-border">
                             <h3 class="box-title">Lista de projetos</h3>
                             <div class="box-tools pull-right">
-                                    <a class="btn btn-primary btn-inv-criar">Criar Projeto</a>
+                            <a class="btn btn-primary" href="{{url('projeto/criar')}}" id="btn-inv-criar_proj">Criar Projeto</a>
                             </div>
                         </div>
                         

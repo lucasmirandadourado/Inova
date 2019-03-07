@@ -27,14 +27,12 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
+        // $data = $request->all();
         
-        $cliente = new Cliente([
-            'nome'      => $request->get('nome'),
-            'email'     => $request->get('email'),
-            'endereco'  => $request->get('endereco')
-        ]);
-        $cliente->save();
-        
+        $cliente = new Cliente($request->all());
+
+        $value = $cliente->save();
+        // echo $value;
         return redirect('cliente');
     }
 
@@ -83,7 +81,7 @@ class ClienteController extends Controller
         //
     }
 
-    public function ajaxCliente(Request $request) {
+    public function ajaxCliente() {
         $clientes = Cliente::all();
         return response()->json($clientes);
     }

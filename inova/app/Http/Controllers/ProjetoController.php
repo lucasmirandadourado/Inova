@@ -19,13 +19,7 @@ class ProjetoController extends Controller
 
     public function create()
     {
-        $cliente = new Cliente;
-        $clientes = $cliente->getListaClientes();
-
-        $arquiteta = new Arquiteta;
-        $arquitetas = $arquiteta->getListaAll();
-
-        return view("projeto.criar", compact('clientes', 'arquitetas'));
+        return view("projeto.criar");
     }
 
     public function store(Request $request)

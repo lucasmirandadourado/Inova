@@ -20,6 +20,8 @@ class Arquiteta extends Migration
             $table->string('endereco', 200);
             $table->string('cau', 10);
             $table->string('contato', 12);
+            $table->string('login', 20);
+            $table->string('senha', 120);
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at');
         });
