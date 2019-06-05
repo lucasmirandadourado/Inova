@@ -31,7 +31,9 @@
                 <label for="inv_endereco">Endereço</label>
                 <input type="text" name="endereco" class="form-control" id="inv_endereco" placeholder="Endereço">
             </div>
-            <button class="btn btn-primary" id="inv_salvar_cliente">Salvar</button>
+            <div class="form-group" id="inv_salvar_proj">
+                <button class="btn btn-primary" id="inv_salvar_cliente">Salvar</button>
+            </div>
         </form>
                                     
     </section>    

@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use App\Cliente;
-use Symfony\Component\HttpKernel\Client;
+
 
 class ClienteController extends Controller
 {
@@ -27,12 +26,8 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        // $data = $request->all();
-        
         $cliente = new Cliente($request->all());
-
-        $value = $cliente->save();
-        // echo $value;
+        $cliente->save();
         return redirect('cliente');
     }
 

@@ -8,7 +8,9 @@ use App\Projeto;
 
 class Arquiteta extends Model
 {
+    protected $fillable = ['id', 'nome', 'contato', 'endereco'];
     protected $guarded = ['id', 'created_at', 'update_at'];
+    
     public function getListaArquitetas($limit) {
         return DB::table('arquitetas')->paginate($limit); 
     }

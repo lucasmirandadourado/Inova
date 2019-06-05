@@ -3,7 +3,7 @@ $("#inv_form_cad_cliente").submit(function(e) {
     e.preventDefault(); 
     var form = $(this);
     $.ajax({
-           type: "POST",
+           method: "POST",
            url: '/cliente/store',
            data: form.serialize(), // serializes the form's elements.
            success: function(data)

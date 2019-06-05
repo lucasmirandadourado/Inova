@@ -22,7 +22,7 @@ Route::post('/login/verificarLogin', 'Controller@verificarLogin');
 Route::get('/arquiteta', 'ArquitetaController@index');
 Route::get('/arquiteta/ajaxArquiteta', 'ArquitetaController@ajaxArquiteta');
 Route::get('/arquiteta/criar', 'ArquitetaController@create');
-
+Route::post('/arquiteta/store', 'ArquitetaController@store');
 
 Route::get('/cliente', 'ClienteController@index');
 Route::get('/cliente/ajaxCliente', 'ClienteController@ajaxCliente');

@@ -9,3 +9,9 @@ function formatarTeleforne(v) {
     v=v.replace(/(\d)(\d{4})$/,"$1-$2");    //Coloca hífen entre o quarto e o quinto dígitos
     return v;
 }
+
+function verifcarSenha(senha, confirmarSenha) {
+    if(senha == confirmarSenha){
+        return true;
+    } else return false;
+}

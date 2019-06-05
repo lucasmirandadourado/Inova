@@ -1,0 +1,22 @@
+#c1, #c2, #c3 {
+    width: 40%;
+    height: 50px;
+    float: left;
+    margin: 1px;
+}
+
+#c1 {
+    background-color: aqua;
+    height: 60px;
+    float: left;
+}
+
+#c2 {
+    background-color: brown;
+}
+
+#c3 {
+    background-color: chartreuse;
+    float: left;
+}
+

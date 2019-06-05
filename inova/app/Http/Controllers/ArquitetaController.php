@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use App\Arquiteta;
-use App\Cliente;
+
 
 class ArquitetaController extends Controller
 {
@@ -20,14 +19,9 @@ class ArquitetaController extends Controller
 
     public function store(Request $request)
     {
-        $arquiteta = new Arquiteta([
-            'nome' => $request->get('nome'),
-            'email' => $request->get('email'),
-            'endereco' => $request->get('endereco'),
-            'cau' => $request->get('cau'),
-        ]);
-        $arquiteta->save();
         
+        $arquiteta = new Arquiteta($request->all());
+        $arquiteta->save();                
         return redirect('arquiteta');
     }
 
